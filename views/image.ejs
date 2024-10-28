@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Sharing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f7f7f7;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+            margin: 20px 0;
+        }
+        img {
+            /* Setzt die Höhe des Bildes auf das Doppelte der aktuellen Höhe */
+            height: 200%;
+            width: auto; /* Erhält das Seitenverhältnis des Bildes */
+            display: block; /* Ermöglicht das Zentrieren des Bildes mit margin */
+            margin: 20px auto; /* Zentriert das Bild horizontal und fügt oben/unten Abstand hinzu */
+            border-radius: 15px; /* Abgerundete Ecken */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .social-media-sharing {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-media-sharing a {
+            text-decoration: none;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; /* Kreisförmige Buttons */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .social-media-sharing a:hover {
+            transform: translateY(-3px);
+        }
+        .fa-facebook-square { background-color: #3b5998; }
+        .fa-twitter-square { background-color: #1da1f2; }
+        .fa-linkedin { background-color: #0077b5; }
+    </style>
+</head>
+<body>
+
+<!-- Überschrift "Dein Bild" -->
+<h1>Dein Bild</h1>
+
+<!-- Ort, an dem das Bild angezeigt wird -->
+<!-- Das Bild wird nun von einer externen URL geladen -->
+<img src="https://creativetechnologies.s3.eu-west-2.amazonaws.com/xmas/<%= imageId %>.jpg" alt="Shared Image" />
+
+
+<!-- Social Media Sharing Buttons -->
+<div class="social-media-sharing">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=<%= encodeURIComponent(url) %>" target="_blank">
+        <i class="fab fa-facebook-square fa-2x"></i>
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=<%= encodeURIComponent(url) %>&text=Check out this image!" target="_blank">
+        <i class="fab fa-twitter-square fa-2x"></i>
+    </a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=<%= encodeURIComponent(url) %>" target="_blank">
+        <i class="fab fa-linkedin fa-2x"></i>
+    </a>
+</div>
+
+</body>
+</html>

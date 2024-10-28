@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Sharing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f7f7f7;
+        }
+        img {
+            max-width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .social-media-sharing {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-media-sharing a {
+            text-decoration: none;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .social-media-sharing a:hover {
+            transform: translateY(-5px);
+        }
+        .fa-facebook-square { background-color: #3b5998; }
+        .fa-twitter-square { background-color: #1da1f2; }
+        .fa-linkedin { background-color: #0077b5; }
+    </style>
+</head>
+<body>
+
+<!-- Ort, an dem das Bild angezeigt wird -->
+<!-- Stellen Sie sicher, dass Sie den Pfad zum Bild entsprechend anpassen -->
+<img src="path/to/your/image.jpg" alt="Shared Image" />
+
+<!-- Social Media Sharing Buttons -->
+<div class="social-media-sharing">
+    <!-- Ersetzen Sie YOUR_URL mit der URL, die Sie teilen möchten -->
+    <a href="https://www.facebook.com/sharer/sharer
